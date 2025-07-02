@@ -7,6 +7,8 @@ body {
 }
 
 nav {
+    margin: 5px;
+    padding: 3px;
     display: flex;
     color: black;
     background-color: blanchedalmond;
