@@ -1,0 +1,14 @@
+body {
+    margin: 4px;
+    padding: 2px;
+    display: grid;
+    background-color: blanchedalmond;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav {
+    display: flex;
+    color: black;
+    background-color: blanchedalmond;
+    font-family: 'Times New Roman', Times, serif;
+}
