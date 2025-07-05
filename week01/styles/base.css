@@ -52,7 +52,7 @@ header nav {
   
   max-width: 300px;
   margin: 0 auto;
-  margin-bottom: 30px;
+  
   border-radius: 8px;
   float: right;
 }
@@ -82,9 +82,8 @@ hr {
   float: left;
   display: block;
   margin: 0 auto;
-  margin-bottom: 30px;
   max-width: 300px;
-  border-radius: #ccc;
+ 
 }
 
 footer {
