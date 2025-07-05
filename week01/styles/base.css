@@ -6,11 +6,11 @@
 
 header {
     background-color: darkslategray;
+    background-size: cover;
     color:aliceblue;
     text-align: center;
     margin-top: 30px;
- 
-  
+    font-size: xx-large;
 }
 
 header nav {
@@ -19,6 +19,7 @@ header nav {
     display: grid;
     grid-template-columns: 170px 4fr 4fr 4fr;
     align-items: center;
+    font-size: medium;
     
 }
 
@@ -32,11 +33,13 @@ header nav {
   background-color: darkslategray;
   color:aliceblue;
   text-align: center;
+  border-radius: 5px;
 }
 
 .card1 h2 {
   color:black;
   text-align: center;
+  
 }
 .card1 {
   flex: 2;
@@ -45,7 +48,14 @@ header nav {
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  line-height: 1.6;
+  line-height: normal;
+}
+
+.card1 p {
+  padding: 30px;
+  margin: 2px;
+  font-size: medium;
+  
 }
 
 .card1 img {
@@ -58,32 +68,63 @@ header nav {
 }
 
 hr {
-  margin: 120px;
-  padding: 1px;
-  line-height: 1.6;
+  margin: 40px auto;
+  width: 80%;
+  padding: 0.5px;
 }
 
-.card {
-  flex: 1;
+
+.card2 {
+  flex: 2;
   background-color: #ffffff;
+  margin-top: 30px;
   padding: 10px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
-  line-height: 1.6;
+  line-height: normal;
 }
+
 
 .card h2 {
     background-color: darkslategray;
     color: aliceblue;
     text-align: center;
+    border-radius: 5px;
 }
+
 
 .card2 img {
   float: left;
   display: block;
-  margin: 0 auto;
+  margin: 2px;
   max-width: 300px;
  
+}
+
+.card2 p {
+  display: block;
+  padding: 30px;
+  margin: 2px;
+  font-size: medium;
+  text-align: right;
+}
+
+.card ul li {
+  line-height: 1.6;
+  text-align: left;
+  padding-top: 20px;
+  margin-top: 10px;
+  
+}
+
+.card {
+  flex: 1;
+  background-color: #ffffff;
+  padding: 30px;
+  margin: 5px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  line-height: normal;
 }
 
 footer {
