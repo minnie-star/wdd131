@@ -8,6 +8,9 @@ header {
     background-color: darkslategray;
     color:aliceblue;
     text-align: center;
+    margin-top: 30px;
+ 
+  
 }
 
 header nav {
@@ -38,31 +41,50 @@ header nav {
 .card1 {
   flex: 2;
   background-color: #ffffff;
-  padding: 1rem;
+  margin-top: 30px;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  line-height: 1.6;
 }
 
-.card img {
-  position: relative;
-  max-width: 100%;
-  height: auto;
-  margin-top: 1rem;
-  border-radius: 4px;
+.card1 img {
+  
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  float: right;
+}
+
+hr {
+  margin: 120px;
+  padding: 1px;
+  line-height: 1.6;
 }
 
 .card {
   flex: 1;
   background-color: #ffffff;
-  padding: 1rem;
+  padding: 10px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  line-height: 1.6;
 }
 
 .card h2 {
     background-color: darkslategray;
     color: aliceblue;
     text-align: center;
+}
+
+.card2 img {
+  float: left;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  max-width: 300px;
+  border-radius: #ccc;
 }
 
 footer {
