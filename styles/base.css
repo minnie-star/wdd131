@@ -23,6 +23,12 @@ header nav {
     
 }
 
+header nav:hover {
+    color: darkcyan;
+    font-weight: 800;
+    text-decoration: none;
+}
+
 .content {
   display: flex;
   gap: 1.5rem;
