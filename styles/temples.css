@@ -7,11 +7,10 @@ header {
     background-color: rgb(250, 113, 184);
     display: grid;
     margin: 1rem auto;
-    grid-template-columns: 290px 2fr 2fr 2fr 2fr 2fr;
-    font-size: x-large;
+    grid-template-columns: 290px 4fr 4fr 4fr 4fr 4fr;
     align-items: center;
-    padding: 25px;
-    width: 100%;
+    padding: 35px;
+    max-width: 1400px;
 }
 
 header nav {
@@ -20,7 +19,7 @@ header nav {
     display: flex; 
     flex-wrap: wrap;
     position: relative;
-    left: 370;
+    right: 370;
 }
 
 header nav:hover {
@@ -38,7 +37,33 @@ main h2 {
     text-align: center;
 }
 
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  align-items: start;
+}
+
+.temples figure {
+  margin: 0;
+  text-align: center;
+}
+
+.temples img {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.temples img:hover {
+  transform: scale(1.05);
+}
 
 footer {
     text-align: center;
