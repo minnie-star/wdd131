@@ -3,6 +3,26 @@
     font-size: medium;
 }
 
+#hamburger-menu {
+  display: block;
+  font-size: 2rem;
+  font-weight: 700;
+  text-decoration: none;
+  padding: .5rem .75rem;
+  background-color: rgb(250, 113, 184);
+  color: #1b1a1a;
+}
+
+.hamburger-menu i {
+  font-size: 2rem;
+  color: #333;
+  cursor: pointer;
+}
+
+#hamburger-menu::before {
+  content: "=";
+}
+
 header {
     background-color: rgb(250, 113, 184);
     margin: 1rem auto;
@@ -15,31 +35,44 @@ header {
 
 header h1 {
     justify-self: start; /* Nudges it slightly to the right within its column */
-    margin-left: 9rem;
+    margin-left: 2rem;
     font-size: 1.5rem;
     font-weight: bold;
 }
 
 nav {
-    justify-self: end; /* Pushes the nav to the far right */
-    display: flex;
-    justify-content: space-around;
-    gap: 3rem;
-    flex-wrap: wrap;
-    align-items: center;
-    text-align: right;
+    background-color: rgb(250, 113, 184);
 }
 
-nav a {
+.navigation {
+  list-style: none;
+  margin: 0 auto;
+}
+
+.navigation a {
   display: block;
+  padding: 0.75rem;
+  text-align: left;
+  text-decoration: none;
   color: #1b1a1a;
- 
+  font-weight: 700;
+  transition: 0.5s;
+  font-size: clamp(1rem, 2vmin, 1.5rem);
 }
 
-header nav:hover {
-    color: darkcyan;
+.navigation a:hover, .navigation a:active {
+    border: 1px solid #fff;
     font-weight: 800;
     text-decoration: none;
+    background-color: lightskyblue;
+}
+
+.show li {
+  display: block;
+}
+
+#hamburger-menu.show::before {
+  content: "X";
 }
 
 body {
@@ -56,13 +89,9 @@ main {
     margin: 0 auto;
 }
 
-.flex-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  align-items: start;
-  grid-row: auto;
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .temples figure {
