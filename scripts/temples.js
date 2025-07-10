@@ -11,6 +11,6 @@ hambutton.addEventListener('click', () => {
   const header = document.querySelector('header');
 
   hamburger.addEventListener('click', () => {
-    header.classList.toggle('hamburger-active');
+    header.classList.toggle('show');
 
   });

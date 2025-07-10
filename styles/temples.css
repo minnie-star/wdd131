@@ -72,7 +72,7 @@ nav {
 }
 
 #hamburger-menu.show::before {
-  content: "X";
+  content: "✖️";
 }
 
 body {
