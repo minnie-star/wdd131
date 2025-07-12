@@ -11,6 +11,7 @@
   padding: .5rem .75rem;
   background-color: rgb(250, 113, 184);
   color: #1b1a1a;
+  cursor: pointer;
 }
 
 .hamburger-menu i {
@@ -19,18 +20,12 @@
   cursor: pointer;
 }
 
-#hamburger-menu::before {
-  content: '=';
-}
 
 header {
     background-color: rgb(250, 113, 184);
-    margin: 1rem auto;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr; /* Balanced layout for left, center, right */
-    align-items: center;
-    max-width: 1400px;
-    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
 }
 
 header h1 {
@@ -38,19 +33,41 @@ header h1 {
     margin-left: 2rem;
     font-size: 1.5rem;
     font-weight: bold;
+    text-align: center;
 }
 
 nav {
     background-color: rgb(250, 113, 184);
 }
 
+.grid { 
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
 .navigation {
+  display: none;
+  flex-direction: column;
+  background-color: rgb(250, 113, 184);
+  padding: 1rem;
   list-style: none;
   margin: 0 auto;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.navigation.responsive {
+  display: flex;
+}
+
+.hamburger-menu.responsive {
+  display: flex;
 }
 
 .navigation li {
-  display: none;
+  display: block;
 }
 
 .navigation a {
@@ -63,6 +80,8 @@ nav {
   transition: 0.5s;
   font-size: clamp(1rem, 2vmin, 1.5rem);
 }
+
+
 
 .navigation a:hover, .navigation a:active {
     border: 1px solid #fff;
@@ -89,7 +108,6 @@ main h2 {
 }
 
 main {
-    max-width: 1400px;
     margin: 0 auto;
 }
 
@@ -107,6 +125,8 @@ main {
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
   transition: transform 0.3s ease;
+  height: auto;
+  max-width: 100%;
 }
 
 .temples img:hover {
