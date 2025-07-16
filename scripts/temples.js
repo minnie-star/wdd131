@@ -4,20 +4,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentYear = new Date().getFullYear();
   const lastModified = document.lastModified;
 
-  footerDate.textContent = `Last Modified: ${lastModified} | ©${currentYear} Minenhle Hlongwane`;
+  footerDate.textContent = `Last Modified: ${lastModified}`;
 
   // Hamburger Menu Toggle
-  const hamburger = document.getElementById("hamburger-menu");
+  const hamburger = document.querySelector("#hamburger-menu");
   const navMenu = document.querySelector(".navigation");
 
   // Create hamburger icon
   hamburger.innerHTML = '<i class="fas fa-bars"></i>';
   hamburger.style.cursor = "pointer";
 
-  hamburger.addEventListener("click", (e) => {
-    e.preventDefault();
-    navMenu.classList.toggle('show');
-    navMenu.classList.toggle("responsive");
+  hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("show");
+    navMenu.classList.toggle("show");
 
     // Toggle icon: ☰ ↔ ✖
     const isOpen = navMenu.classList.contains("responsive");

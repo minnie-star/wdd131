@@ -1,6 +1,20 @@
 * {
-    padding: 1px;
-    font-size: medium;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(252, 216, 221);
+    margin: auto;
+}
+
+h1 {
+    font-size: 1.5rem;
+    padding: 1rem;
+    background-color: rgb(250, 113, 184);
+    color: #1b1a1a;
+    text-align: center;
 }
 
 #hamburger-menu {
@@ -14,60 +28,23 @@
   cursor: pointer;
 }
 
-.hamburger-menu i {
-  font-size: 2rem;
-  color: #333;
-  cursor: pointer;
-}
-
-
-header {
-    background-color: rgb(250, 113, 184);
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-}
-
-header h1 {
-    justify-self: start; /* Nudges it slightly to the right within its column */
-    margin-left: 2rem;
-    font-size: 1.5rem;
-    font-weight: bold;
-    text-align: center;
-}
-
 nav {
     background-color: rgb(250, 113, 184);
 }
 
-.grid { 
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  padding: 1rem;
-}
-
 .navigation {
   display: none;
-  flex-direction: column;
+  /*flex-direction: row;*/
   background-color: rgb(250, 113, 184);
   padding: 1rem;
   list-style: none;
   margin: 0 auto;
-  width: 100%;
+  max-width: 760px;
   margin-top: 0.5rem;
 }
 
-.navigation.responsive {
-  display: flex;
-}
-
-.hamburger-menu.responsive {
-  display: flex;
-}
-
 .navigation li {
-  display: block;
+  display: none;
 }
 
 .navigation a {
@@ -81,8 +58,6 @@ nav {
   font-size: clamp(1rem, 2vmin, 1.5rem);
 }
 
-
-
 .navigation a:hover, .navigation a:active {
     border: 1px solid #fff;
     font-weight: 800;
@@ -94,14 +69,20 @@ nav {
   display: block;
 }
 
-#hamburger-menu.show::before {
-  content: "✖️";
+header {
+    background-color: rgb(250, 113, 184);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
-body {
-    background-color: rgb(252, 216, 221);
-    margin: auto;
+/*.navigation.responsive {
+  display: flex;
 }
+
+.hamburger-menu.responsive {
+  display: flex;
+}*/
 
 main h2 {
     text-align: center;
@@ -111,9 +92,11 @@ main {
     margin: 0 auto;
 }
 
-.grid {
+.grid { 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
 }
 
 .temples figure {
