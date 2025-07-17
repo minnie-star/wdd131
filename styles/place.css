@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+header {
+  background-color: #c00;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  padding: 1rem;
+}
+
+.hero {
+  position: relative;
+}
+
+.hero img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hero article {
+    position: absolute;
+    background-color: rgba(202, 217, 247, 0.664);
+    top: 40px;
+    left: 0;
+    right: 19;
+    margin: 0 auto;
+    width: 20%;
+    padding: 1rem;
+    align-items: flex-end;
+    border-radius: 8px;
+}
+
+.hero ul li {
+  list-style: none;
+  margin-top: 0.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.hero h2 {
+  text-align: center;
+  background-color: #ee3636;
+  color: white;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section img {
+  width: 5px;
+  height: 10px;
+}
+
+.weather-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.hero section {
+  position: absolute;
+    background-color: rgba(202, 217, 247, 0.664);
+    top: 100px;
+    left: 18;
+    right: 0;
+    margin: 0 auto;
+    width: 20%;
+    padding: 1rem;
+    align-items: flex-end;
+}
+
+footer {
+  background-color: #c00;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .background {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero {
+    width: 100%;
+  }
+
+  article {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
