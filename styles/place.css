@@ -1,114 +1,55 @@
 :root {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  --accent-color: #da1212; /* example red for Japan */
+  --bg-color: #f8f8f8;
+  --text-color: #222;
 }
 
 body {
+  font-family: 'Lora', serif;
   margin: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  color: var(--text-color);
 }
 
-header {
-  background-color: #c00;
-  color: white;
+header, footer {
   text-align: center;
   padding: 1rem;
-}
-
-main {
-  padding: 1rem;
+  background-color: var(--accent-color);
+  color: white;
 }
 
 .hero {
   position: relative;
 }
 
-.hero img {
-    position: relative;
-    width: 100%;
-    height: auto;
-    display: block;
+picture img {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-.hero article {
-    position: absolute;
-    background-color: rgba(202, 217, 247, 0.664);
-    top: 50px;
-    left: 18px;
-    right: 1200px;
-    margin: 0 auto;
-    width: 20%;
-    padding: 1rem;
-    align-items: flex-end;
-    border-radius: 8px;
+.info-panels {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 2rem;
+}
+
+.info-box {
+  background-color: rgba(175, 221, 240, 0.85);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.hero h2 {
+  background-color: #f53535;
+  text-align: center;
+  color: #f8f8f8;
 }
 
 .hero ul li {
   list-style: none;
-  margin-top: 0.5rem;
-  margin-bottom: 0.4rem;
-}
-
-.hero h2 {
-  text-align: center;
-  background-color: #ee3636;
-  color: white;
-  padding: 0.5rem;
-  font-size: 1.2rem;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.section img {
-  width: 5px;
-  height: 10px;
-}
-
-.weather-icon {
-  width: 20px;
-  height: 20px;
-}
-
-.hero section {
-  position: absolute;
-  background-color: rgba(202, 217, 247, 0.664);
-  top: 100px;
-  left: 1000px;
-  right: 12px;
-  margin: 0 auto;
-  width: 20%;
-  padding: 1rem;
-  align-items: flex-end;
-}
-
-footer {
-  background-color: #c00;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
-
-@media (max-width: 768px) {
-  .background {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .hero {
-    width: 100%;
-  }
-
-  article {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
-  section {
-    flex-direction: column;
-    align-items: center;
-  }
 }
