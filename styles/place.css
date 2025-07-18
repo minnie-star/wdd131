@@ -35,8 +35,8 @@ main {
     position: absolute;
     background-color: rgba(202, 217, 247, 0.664);
     top: 50px;
-    left: 18;
-    right: 0;
+    left: 18px;
+    right: 1200px;
     margin: 0 auto;
     width: 20%;
     padding: 1rem;
@@ -75,8 +75,8 @@ main {
   position: absolute;
   background-color: rgba(202, 217, 247, 0.664);
   top: 100px;
-  left: 18px;
-  right: 12;
+  left: 1000px;
+  right: 12px;
   margin: 0 auto;
   width: 20%;
   padding: 1rem;
