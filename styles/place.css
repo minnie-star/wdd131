@@ -1,5 +1,6 @@
-* {
+:root {
   box-sizing: border-box;
+  padding: 0;
 }
 
 body {
@@ -33,9 +34,9 @@ main {
 .hero article {
     position: absolute;
     background-color: rgba(202, 217, 247, 0.664);
-    top: 40px;
-    left: 0;
-    right: 19;
+    top: 50px;
+    left: 18;
+    right: 0;
     margin: 0 auto;
     width: 20%;
     padding: 1rem;
@@ -72,14 +73,14 @@ main {
 
 .hero section {
   position: absolute;
-    background-color: rgba(202, 217, 247, 0.664);
-    top: 100px;
-    left: 18;
-    right: 0;
-    margin: 0 auto;
-    width: 20%;
-    padding: 1rem;
-    align-items: flex-end;
+  background-color: rgba(202, 217, 247, 0.664);
+  top: 100px;
+  left: 18px;
+  right: 12;
+  margin: 0 auto;
+  width: 20%;
+  padding: 1rem;
+  align-items: flex-end;
 }
 
 footer {
