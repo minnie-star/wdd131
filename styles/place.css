@@ -1,11 +1,10 @@
 :root {
-  --accent-color: #da1212; /* example red for Japan */
+  --accent-color: #da1212;
   --bg-color: #f8f8f8;
   --text-color: #222;
 }
 
 body {
-  font-family: 'Lora', serif;
   margin: 0;
   color: var(--text-color);
 }

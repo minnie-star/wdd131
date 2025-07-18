@@ -1,13 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Footer: Copyright year and last modified date
+  
   const footerDate = document.getElementById("lastModified");
   const currentYear = new Date().getFullYear();
   const lastModified = document.lastModified;
 
-  // Update footer content
+  
   footerDate.textContent = `© ${currentYear} | Last Modified: ${lastModified}`;
 
-  // Static values (can be replaced with dynamic values later)
+  // Static values 
   const temperature = 10; // in Celsius
   const windSpeed = 5; // in km/h
 
