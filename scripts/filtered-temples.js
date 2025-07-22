@@ -88,29 +88,47 @@ const temples = [
     "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/laie-hawaii/800x500/laie-temple-775369-wallpaper.jpg"
   },
   {
-    templeName: "Mexico City Mexico",
-    location: "Mexico City, Mexico",
+    templeName: "Caracas Venezuela",
+    location: "Caracas Venezuela",
     dedicated: "1983, December, 2",
     area: 116642,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    "https://churchofjesuschristtemples.org/assets/img/temples/_temp/096-Caracas-Venezuela-Temple.jpg"
   },
   {
-    templeName: "Mexico City Mexico",
-    location: "Mexico City, Mexico",
+    templeName: "Oakland California ",
+    location: "Oakland California United States",
     dedicated: "1983, December, 2",
     area: 116642,
     imageUrl:
-    "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+    "https://churchofjesuschristtemples.org/assets/img/temples/oakland-california-temple/oakland-california-temple-2654-main.jpg"
   },
+  {
+    templeName: "Manhattan New York",
+    location: "Manhattan New York United States",
+    dedicated: "1970, June, 3",
+    area: 56372,
+    imageUrl:
+    "https://churchofjesuschristtemples.org/assets/img/temples/manhattan-new-york-temple/manhattan-new-york-temple-40080-main.jpg"
+  },
+  {
+    templeName: "Collins Colorado",
+    location: "Collins Colorado United States",
+    dedicated: "1957, July, 16",
+    area: 56372,
+    imageUrl:
+    "https://churchofjesuschristtemples.org/assets/img/temples/fort-collins-colorado-temple/fort-collins-colorado-temple-50577-main.jpg"
+  }
+  
+  
 ]
 
 createTempleCard(temples);
 
-const nonutahLink = document.querySelector(".nonutah");
+const nonusaLink = document.querySelector(".nonusa");
 
-nonutahLink.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => !temple.location.includes("Utah")));
+nonusaLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => !temple.location.includes("United States")));
 });
 
 function createTempleCard(filteredTemples) {
