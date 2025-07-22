@@ -80,8 +80,8 @@ const temples = [
   },
   // Add more temple objects here...
   {
-    templeName: "Johannesburg South Africa",
-    location: "Johannesburg South Africa",
+    templeName: "Laie Hawaii",
+    location: "Laie Hawaii",
     dedicated: "1996, January",
     area: 4920,
     imageUrl: 
