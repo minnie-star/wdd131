@@ -1,40 +1,24 @@
 @media (min-width: 768px) {
-  h1 {
-    font-size: 2rem;
+  nav {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
 
   .navigation {
     display: flex !important;
     flex-direction: row;
-    justify-content: center;
-    background-color: transparent;
-    padding: 0;
-    gap: 1rem;
-    background-color: transparent;
-    padding: 0;
-  }
-
-  .navigation li {
-    display: block;
-    flex: 1 1 100%;
-  }
-
-  .navigation a {
-    text-align: center;
-  }
-
-  .navigation.responsive {
-    display: flex;
   }
 
   #hamburger-menu {
     display: none;
   }
 
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
+  .grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
   }
 }
+

@@ -1,22 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Footer: Copyright year and last modified date
-  const footerDate = document.getElementById("lastModified");
+  // Footer
+  const footer = document.getElementById("lastModified");
   const currentYear = new Date().getFullYear();
   const lastModified = document.lastModified;
+  footer.textContent = `Last Modified: ${lastModified} | © ${currentYear}`;
 
-  footerDate.textContent = `Last Modified: ${lastModified}`;
-
-
+  // Hamburger Menu
   const hamburger = document.getElementById("hamburger-menu");
   const navMenu = document.querySelector(".navigation");
 
-  hamburger.addEventListener("click", (e) => {
-    e.preventDefault();
-    navMenu.classList.toggle("responsive");
-
-    const isOpen = navMenu.classList.contains("responsive");
-    hamburger.innerHTML = isOpen
-      ? '<i class="fas fa-times"></i>'
-      : '<i class="fas fa-bars"></i>';
-  });
+  if (hamburger && navMenu) {
+    hamburger.innerHTML = '<i class="fas fa-bars"></i>'; // or use plain text ☰
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+      hamburger.innerHTML = navMenu.classList.contains("show")
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+    });
+  }
 });
