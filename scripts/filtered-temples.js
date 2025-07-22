@@ -4,26 +4,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentYear = new Date().getFullYear();
   const lastModified = document.lastModified;
 
-  footerDate.textContent = `Last Modified: ${lastModified} | ${currentYear}`;
+  footerDate.textContent = `Last Modified: ${lastModified} |  © ${currentYear}`;
 
-  // Hamburger Menu Toggle
-  const hamburger = document.querySelector("#hamburger-menu");
+  // Hamburger Menu
+  const hamburger = document.getElementById("hamburger-menu");
   const navMenu = document.querySelector(".navigation");
 
-  // Create hamburger icon
-  hamburger.innerHTML = '<i class="fas fa-bars"></i>';
-  hamburger.style.cursor = "pointer";
-
-  hamburger.addEventListener("click", () => {
-    hamburger.classList.toggle("show");
-    navMenu.classList.toggle("show");
-
-    // Toggle icon: ☰ ↔ ✖
-    const isOpen = navMenu.classList.contains("responsive");
-    hamburger.innerHTML = isOpen
-      ? '<i class="fas fa-times"></i>' // X icon
-      : '<i class="fas fa-bars"></i>'; // Hamburger icon
-  });
+  if (hamburger && navMenu) {
+    hamburger.innerHTML = '<i class="fas fa-bars"></i>'; // or use plain text ☰
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+      hamburger.innerHTML = navMenu.classList.contains("show")
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+    });
+  }
 
 
 const temples = [
