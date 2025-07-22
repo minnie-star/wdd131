@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navMenu = document.querySelector(".navigation");
 
   if (hamburger && navMenu) {
-    hamburger.innerHTML = '<i class="fas fa-bars"></i>'; // or use plain text ☰
+    hamburger.innerHTML = '<i class="fas fa-bars"></i>'; 
     hamburger.addEventListener("click", () => {
       navMenu.classList.toggle("show");
       hamburger.innerHTML = navMenu.classList.contains("show")
