@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentYear = new Date().getFullYear();
   const lastModified = document.lastModified;
 
-  footerDate.textContent = `Last Modified: ${lastModified}`;
+  footerDate.textContent = `Last Modified: ${lastModified} | ${currentYear}`;
 
   // Hamburger Menu Toggle
   const hamburger = document.querySelector("#hamburger-menu");
@@ -110,25 +110,25 @@ const temples = [
   },
 ]
 
-creatTempleCard(temples);
+createTempleCard(temples);
 
-const nonutahLink = document.querySelector("nonutah");
+const nonutahLink = document.querySelector(".nonutah");
 
 nonutahLink.addEventListener("click", () => {
-    creatTempleCard(temples.filter(temple =>!temple.location.includes("Utah")));
+    createTempleCard(temples.filter(temple => !temple.location.includes("Utah")));
 });
 
-function creatTempleCard(filteredTemples) {
+function createTempleCard(filteredTemples) {
     document.querySelector(".grid").innerHTML = "";
     filteredTemples.forEach(temple => {
         let card = document.createElement("section");
-        let name = document.createElement("h2");
+        let name = document.createElement("h3");
         let location = document.createElement("p");
         let dedication = document.createElement("p");
         let area = document.createElement("p");
         let img = document.createElement("img");
 
-        name.textContent = temples.templeName;
+        name.textContent = temple.templeName;
         location.innerHTML = `<span class="label">Location:</span> ${temple.location}`;
         dedication.innerHTML = `<span class="label">Dedication:</span> ${temple.dedicated}`;
         area.innerHTML =   `<span class="label">Area:</span> ${temple.area}`;
