@@ -125,11 +125,42 @@ const temples = [
 
 createTempleCard(temples);
 
-const nonusaLink = document.querySelector(".nonusa");
 
-nonusaLink.addEventListener("click", () => {
-    createTempleCard(temples.filter(temple => !temple.location.includes("United States")));
+
+
+const oldLink = document.querySelector(".old");
+const newLink = document.querySelector(".new");
+const largeLink = document.querySelector(".large");
+const smallLink = document.querySelector(".small");
+const homeLink = document.querySelector(".home");
+
+
+oldLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => {
+        const year = parseInt(temple.dedicated.split(",")[0]);
+        return year < 1900;
+    }));
 });
+
+newLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => {
+        const year = parseInt(temple.dedicated.split(",")[0]);
+        return year > 2000;
+    }));
+});
+
+largeLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.area > 90000));
+});
+
+smallLink.addEventListener("click", () => {
+    createTempleCard(temples.filter(temple => temple.area < 10000));
+});
+
+homeLink.addEventListener("click", () => {
+  createTempleCard(temples)
+});
+
 
 function createTempleCard(filteredTemples) {
     document.querySelector(".grid").innerHTML = "";
