@@ -2,20 +2,22 @@
     font-family:'Times New Roman', Times, serif;
     margin: 5px;
     padding: 0px;
+    
 }
 
 header {
-    background-color: darkslategray;
-    background-size: cover;
+    background-color: #8894b7;
+    padding: 1.5rem;
     color:aliceblue;
     text-align: center;
     margin-top: 30px;
     font-size: xx-large;
+    box-sizing: border-box;    
 }
 
 header nav {
-    background-color: rgb(49, 48, 48);
-    color:aliceblue;
+    background-color: #f5c74d;
+    color:black;
     display: grid;
     grid-template-columns: 170px 4fr 4fr 4fr;
     align-items: center;
@@ -24,9 +26,13 @@ header nav {
 }
 
 header nav:hover {
-    color: darkcyan;
+    color: #da3669;
     font-weight: 800;
     text-decoration: none;
+}
+
+body{
+  margin: 0;
 }
 
 .content {
@@ -36,7 +42,7 @@ header nav:hover {
 }
 
 .card1 h1 {
-  background-color: darkslategray;
+  background-color: #8894b7;
   color:aliceblue;
   text-align: center;
   border-radius: 5px;
@@ -92,7 +98,7 @@ hr {
 
 
 .card h2 {
-    background-color: darkslategray;
+    background-color: #8894b7;
     color: aliceblue;
     text-align: center;
     border-radius: 5px;
@@ -134,7 +140,8 @@ hr {
 }
 
 footer {
-    background-color: darkslategray;
+    background-color: #8894b7;
     text-align: center;
     color:aliceblue;
+    padding: 1rem;
 }
