@@ -1,0 +1,111 @@
+/* header and footer */
+header, footer {
+    background-color: rgb(250, 141, 101);
+    padding: 1rem;
+    text-align: center;
+}
+
+/* main / body*/
+main {
+    background-color: rgb(243, 201, 184);
+    padding: 0 2%;
+    min-height: 20rem;
+}
+
+body {
+    background-color: rgb(243, 201, 184);
+}
+
+.ff1 fieldset {
+    margin:2rem 0;
+    border: 1px solid #fa8846;
+    border-radius: 6px;
+    padding: .5rem 2%;
+}
+
+.ff1 label {
+    display: block;
+    padding-top: 1rem;
+    color: rgb(12, 12, 12);
+    font-size: .9rem;
+}
+
+.ff1 input[type="text"],
+.ff1 input[type="date"],
+.ff1 select {
+    background-color: #f8e2d5;
+    display: block;
+    border: 1px solid #fa8846;
+    padding: .75rem;
+    color: rgb(65, 64, 64);
+    width: 98%;
+    min-width: 400px;
+    appearance: none;
+}
+
+.ff1 input[type="checkbox"] {
+     margin-right: 6px;
+}
+
+.ff1 input[type="submit"] {
+    border: none;
+    background-image: linear-gradient(#f35c3a, #b93416);
+    color: white;
+    border-radius: 6px;
+    padding: .8rem;
+    width: 96%;
+    max-width: 400px;
+    margin: -1rem 2% 2rem 2%;
+    box-shadow: 1px 1px 4px #838282;
+}
+
+/* use reverse flexbox to take advantage of flex-direction: reverse */
+.star-rating {
+  display: flex;
+  align-items: flex-start;
+  width: 160px;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  margin: 40px auto;
+  position: relative;
+}
+/* hide the inputs */
+.star-rating input {
+  display: none;
+}
+/* set properties of all labels */
+.star-rating > label {
+  width: 30px;
+  height: 30px;
+  font-family: Arial;
+  font-size: 30px;
+  transition: 0.2s ease;
+  color: orange;
+}
+/* give label a hover state */
+.star-rating label:hover {
+  color: #ff69b4;
+  transition: 0.2s ease;
+}
+.star-rating label:active::before {
+  transform:scale(1.1);
+}
+
+/* set shape of unselected label */
+.star-rating label::before {
+  content: '\2606';
+  position: absolute;
+  top: 0px;
+  line-height: 26px;
+}
+/* set full star shape for checked label and those that come after it */
+.star-rating input:checked ~ label:before {
+  content:'\2605';
+}
+
+@-moz-document url-prefix() {
+  .star-rating input:checked ~ label:before {
+  font-size: 36px;
+  line-height: 21px;
+  }
+}  
