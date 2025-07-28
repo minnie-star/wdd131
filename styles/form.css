@@ -52,6 +52,7 @@ body {
     color: rgb(65, 64, 64);
     appearance: none;
     min-width: auto;
+    width: 78%;
 }
 
 .ff1 input[type="checkbox"] {
