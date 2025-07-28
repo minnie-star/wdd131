@@ -4,8 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentYear = new Date().getFullYear();
   const lastModified = document.lastModified;
 
-  
-  footerDate.textContent = `© ${currentYear} | Last Modified: ${lastModified}`;
+footerDate.textContent = `© ${currentYear} | Last Modified: ${lastModified}`;
 
   const products = [
   {
@@ -33,5 +32,15 @@ document.addEventListener("DOMContentLoaded", () => {
     name: "warp equalizer",
     averagerating: 5.0
   }
-];
+  ]
+
+  const productSelect = document.getElementById("product");
+
+    products.forEach(product => {
+      let option = document.createElement("option");
+      option.value = product.id;
+      option.textContent = `${product.name} (Rating: ${product.averagerating})`;
+      productSelect.appendChild(option);
+    });
+  
   });
