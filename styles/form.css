@@ -3,7 +3,7 @@ header, footer {
     background-color: rgb(250, 141, 101);
     padding: 1rem;
     text-align: center;
-    min-width: none;
+    min-width: auto;
 }
 
 /* main / body*/
@@ -40,7 +40,7 @@ body {
     padding: .75rem;
     color: rgb(65, 64, 64);
     width: 78%;
-    min-width: none;
+    min-width: auto;
     appearance: none;
 }
 
@@ -51,7 +51,7 @@ body {
     padding: .75rem;
     color: rgb(65, 64, 64);
     appearance: none;
-    min-width: none;
+    min-width: auto;
 }
 
 .ff1 input[type="checkbox"] {
