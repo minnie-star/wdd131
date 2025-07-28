@@ -30,6 +30,7 @@ body {
     font-size: .9rem;
 }
 
+.ff1 input[type="textarea"],
 .ff1 input[type="text"],
 .ff1 input[type="date"],
 .ff1 select {
