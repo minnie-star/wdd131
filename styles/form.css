@@ -30,7 +30,6 @@ body {
     font-size: .9rem;
 }
 
-.ff1 input[type="textarea"],
 .ff1 input[type="text"],
 .ff1 input[type="date"],
 .ff1 select {
@@ -42,6 +41,16 @@ body {
     width: 98%;
     min-width: 400px;
     appearance: none;
+}
+
+.ff1 textarea {
+    background-color: #f8e2d5;
+    display: block;
+    border: 1px solid #fa8846;
+    padding: .75rem;
+    color: rgb(65, 64, 64);
+    appearance: none;
+    min-width: 400px;
 }
 
 .ff1 input[type="checkbox"] {
