@@ -161,6 +161,107 @@ h1 {
   float: right;
 }
 
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 15px;
+}
+
+.rf fieldset {
+    margin:2rem 0;
+    border: 1px solid #f87970;
+    border-radius: 6px;
+    padding: .5rem 2%;
+}
+
+.rf label {
+    display: block;
+    padding-top: 1rem;
+    color: rgb(12, 12, 12);
+    font-size: .9rem;
+}
+
+.rf input[type="text"],
+input[type="email"]
+ {
+    background-color: #f5d0df;
+    display: block;
+    border: 1px solid #f87970;
+    padding: .75rem;
+    color: rgb(65, 64, 64);
+    width: 78%;
+    min-width: auto;
+    appearance: none;
+}
+
+.rf textarea {
+    background-color: #f5d0df;
+    display: block;
+    border: 1px solid #f87970;
+    padding: .75rem;
+    color: rgb(65, 64, 64);
+    appearance: none;
+    min-width: auto;
+    width: 78%;
+}
+
+.rf input[type="submit"] {
+    border: none;
+    background-image: linear-gradient(#A8B371, #758040);
+    color: white;
+    border-radius: 6px;
+    padding: .8rem;
+    width: 96%;
+    max-width: 400px;
+    margin: -1rem 2% 2rem 2%;
+    box-shadow: 1px 1px 4px #838282;
+    text-align: center;
+    align-self: center;
+}
+
+.card {
+  margin-top: 20px;
+  margin-left: 180px;
+}
+
+.card ul li {
+  line-height: 1.6;
+  text-align: left;
+  padding-top: 20px;
+  margin-top: 10px;
+}
+
+#favorites-list {
+  list-style: none;
+  padding: 0;
+}
+#favorites-list li {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#cuisine-filter {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+#cuisine-filter button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background: #eee;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.card {
+  transition: all 0.3s ease;
+}
+
 footer {
   background-color: #A8B371;
   color: white;
