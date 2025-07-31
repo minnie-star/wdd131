@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F5AFB9;
+  color: #333;
+}
+
+header {
+  background-color: #A8B371;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f87970;
+    padding: 10px 0;
+    margin: 0;
+    width: 100%;
+    font-weight: bold;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: blanchedalmond;
+}
+
+.navigation a:hover {
+  color: #0e268f;        
+}
+
+.logo {
+  width: 80px;
+  height: 70px;
+}
+
+h1, h2 {
+  font-family: 'Merriweather', serif;
+  margin: 0.5rem 0;
+}
+
+.hero {
+  position: relative;
+}
+
+picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.meal-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #F5AFB9;
+  gap: 2rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+
+.hero h2 { 
+  background-color: #A8B371;
+  text-align: center;
+  color: #f8f8f8;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.main figure {
+  margin: 0;
+  text-align: center;
+}
+
+.main img {
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.main img:hover {
+  transform: scale(1.05);
+}
+
+.grid a {
+    text-decoration: none;
+    color: #131312;
+}
+
+h1 {
+  
+  color:aliceblue;
+  text-align: center;
+  border-radius: 5px;
+  width: 600px;
+  align-self: center;
+  margin-left: 29%;
+}
+
+.card1 h2 {
+  color:aliceblue;
+  text-align: center;
+  
+}
+
+.card1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #F5AFB9;
+  margin-top: 30px;
+  padding: 1px;
+  line-height: normal;
+}
+
+.card1 p {
+  padding: 30px;
+  margin: 2px;
+  font-size: medium;
+  
+}
+
+.card1 img {
+  max-width: 550px;
+  margin: 0 auto;
+  border-radius: 8px;
+  float: right;
+}
+
+.card2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background-color: #F5AFB9;
+  margin-top: 30px;
+  padding: 1px;
+  line-height: normal;
+}
+
+.card2 p {
+  padding: 30px;
+  margin: 2px;
+  font-size: medium;
+  
+}
+
+.card2 img {
+  max-width: 550px;
+  margin: 0 auto;
+  border-radius: 8px;
+  float: right;
+}
+
+footer {
+  background-color: #A8B371;
+  color: white;
+  padding: 0.5rem;
+  text-align: center;
+}

@@ -43,7 +43,7 @@ picture img {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.hero h2 {
+.hero h2 { 
   background-color: #f53535;
   text-align: center;
   color: #f8f8f8;
