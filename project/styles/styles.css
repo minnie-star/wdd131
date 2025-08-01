@@ -8,6 +8,7 @@ header {
   text-align: center;
 }
 
+/*  navigation  */
 nav {
   display: flex;
   justify-content: center;
@@ -15,7 +16,7 @@ nav {
 }
 
 .navigation {
-    display: flex;
+    display: none;
     justify-content: space-around;
     background-color: #f87970;
     padding: 10px 0;
@@ -25,21 +26,34 @@ nav {
 }
 
 .navigation a {
-    text-decoration: none;
-    color: blanchedalmond;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* Hamburger button styles */
+#hamburger-menu {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
 }
 
 .navigation a:hover {
-  color: lightskyblue;        
+  background-color: #9cbcdf;        
 }
 
+/* Show the menu when toggled */
+.navigation.show {
+  display: flex;
+  flex-direction: column; 
+}
+
+/* logo img */
 .logo {
   width: 80px;
   height: 70px;
-}
-
-.show li {
-  display: block;
 }
 
 /* body */
@@ -49,12 +63,30 @@ body {
   color: #333;
 }
 
+/* heading elements */
 h1, h2 {
   font-family: 'Merriweather', serif;
   width:auto;
   text-align: center;
 }
 
+.hero h1 {
+  color: blanchedalmond;
+  text-align: center;
+  border-radius: 5px;
+  width: 600px;
+  align-self: center;
+  margin-left: 29%;
+  margin-top: 30px;
+}
+
+.hero h2 { 
+  background-color: #A8B371;
+  text-align: center;
+  color: #f8f8f8;
+}
+
+/*  hero elements  */
 .hero {
   position: relative;
 }
@@ -71,19 +103,14 @@ picture img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: #F5AFB9;
   gap: 2rem;
   padding: 1rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
   border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  background-color: #F5AFB9;
 }
 
-.hero h2 { 
-  background-color: #A8B371;
-  text-align: center;
-  color: #f8f8f8;
-}
-
+/*  grid  elements  */
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -93,6 +120,12 @@ picture img {
   margin: 0 auto;
 }
 
+.grid a {
+  text-decoration: none;
+  color: #131312;
+}
+
+/*  main elements  */
 .main figure {
   margin: 0;
   text-align: center;
@@ -108,27 +141,7 @@ picture img {
   transform: scale(1.05);
 }
 
-.grid a {
-  text-decoration: none;
-  color: #131312;
-}
-
-.hero h1 {
-  color: blanchedalmond;
-  text-align: center;
-  border-radius: 5px;
-  width: 600px;
-  align-self: center;
-  margin-left: 29%;
-  margin-top: 30px;
-}
-
-.card1 h2 {
-  color:aliceblue;
-  text-align: center;
-  
-}
-
+/*  card1 elements  */
 .card1 {
   display: grid;
   grid-template-columns: 1fr;
@@ -153,6 +166,7 @@ picture img {
   display: block;
 }
 
+/*  card2 elements  */
 .card2 {
   display: grid;
   grid-template-columns: 1fr;
@@ -160,6 +174,12 @@ picture img {
   margin-top: 30px;
   padding: 1px;
   line-height: normal;
+}
+
+.card1 h2 {
+  color:aliceblue;
+  text-align: center;
+  
 }
 
 .card2 p {
@@ -177,7 +197,7 @@ picture img {
   display: block;
 }
 
-
+/*  form elements  */
 .form {
   display: grid;
   grid-template-columns: 1fr;
@@ -238,12 +258,18 @@ input[type="email"]
     align-self: center;
 }
 
+/*  card img (map)   */
+.card {
+  transition: all 0.3s ease;
+}
+
 .card img {
   display: block;
   width: 200px;
   margin-left: 28px;
 }
 
+/*  favorite elements  */
 #favorites-list {
   list-style: none;
   padding: 0;
@@ -270,12 +296,7 @@ input[type="email"]
   border-radius: 6px;
 }
 
-.card {
-  transition: all 0.3s ease;
-}
-
-
-
+/*  footer  */
 footer {
   background-color: #A8B371;
   color: white;

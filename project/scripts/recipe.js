@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
-  
+  // Footer Date, Year & Time
   const footerDate = document.getElementById("lastModified");
   const currentYear = new Date().getFullYear();
   const lastModified = document.lastModified;
 
 footerDate.textContent = `© ${currentYear} | Last Modified: ${lastModified}`;
 
-// Hamburger Menu
-  const hamburger = document.getElementById("hamburger-menu");
-  const navMenu = document.querySelector(".navigation");
+// Hamburger Menu Toggle
+const hamburger = document.getElementById("hamburger-menu");
+const navMenu = document.querySelector(".navigation");
 
   if (hamburger && navMenu) {
     hamburger.innerHTML = '<i class="fas fa-bars"></i>'; 
@@ -21,24 +21,27 @@ footerDate.textContent = `© ${currentYear} | Last Modified: ${lastModified}`;
   }
 
 
+// Setting Functin Variables
 const dishCards = document.querySelectorAll(".grid figure");
 const favoritesList = document.getElementById("favorites-list");
 const FAV_KEY = 'favoriteDishes';
 
-// Step 1: Create recipe database using objects
+// Setting & Creating Array
 const dishes = Array.from(dishCards).map(card => ({
   id: parseInt(card.dataset.id),
   name: card.querySelector("figcaption").textContent,
   img: card.querySelector("img").src
 }));
 
-// Step 2: Load favorites
+// Store Favorite Dish Locally
 let favoriteDishes = JSON.parse(localStorage.getItem(FAV_KEY)) || [];
 
+// Save Favorite Function
 function saveFavorites() {
   localStorage.setItem(FAV_KEY, JSON.stringify(favoriteDishes));
 }
 
+// Array Rendering Function
 function renderFavorites() {
   favoritesList.innerHTML = favoriteDishes.map(dish =>
     `<li>
@@ -49,6 +52,7 @@ function renderFavorites() {
   ).join("");
 }
 
+// Add Favorite Function
 function addFavorite(id) {
   const dish = dishes.find(d => d.id === id);
   const alreadySaved = favoriteDishes.some(d => d.id === id);
@@ -62,13 +66,14 @@ function addFavorite(id) {
   }
 }
 
+// Remove Favortie Function
 function removeFavorite(id) {
   favoriteDishes = favoriteDishes.filter(d => d.id !== id);
   saveFavorites();
   renderFavorites();
 }
 
-// Step 3: Wire up buttons
+// Favorite Button
 document.querySelectorAll(".fav-btn").forEach(btn => {
   btn.addEventListener("click", e => {
     const figure = e.target.closest("figure");
@@ -77,7 +82,9 @@ document.querySelectorAll(".fav-btn").forEach(btn => {
   });
 });
 
+// Call Render Favorite Function & Remove Favorite Function
 renderFavorites();
+window.removeFavorite = removeFavorite;
 
 
 })
