@@ -1,0 +1,65 @@
+@media (min-width: 768px) {
+  nav {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .navigation {
+    display: flex !important;
+    flex-direction: row;
+  }
+
+  #hamburger-menu {
+    display: none;
+  }
+
+  .grid {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+  }
+
+  .form {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+
+  .card img {
+    width: 70%;
+    margin-top: 80px;
+    margin-left: 100px;
+  }
+
+   .card1 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+  
+   .card2 {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+  }
+}
+
+/* Responsive stack for mobile */
+@media (max-width: 767px) {
+  .meal-info {
+    position: static;
+    transform: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .meal-info {
+    width: 90%;
+  }
+}

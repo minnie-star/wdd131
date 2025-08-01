@@ -6,6 +6,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 footerDate.textContent = `© ${currentYear} | Last Modified: ${lastModified}`;
 
+// Hamburger Menu
+  const hamburger = document.getElementById("#hamburger-menu");
+  const navMenu = document.querySelector(".navigation");
+
+  if (hamburger && navMenu) {
+    hamburger.innerHTML = '<i class="fas fa-bars"></i>'; 
+    hamburger.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+      hamburger.innerHTML = navMenu.classList.contains("show")
+        ? '<i class="fas fa-times"></i>'
+        : '<i class="fas fa-bars"></i>';
+    });
+  }
 
 
 const dishCards = document.querySelectorAll(".grid figure");
@@ -65,6 +78,6 @@ document.querySelectorAll(".fav-btn").forEach(btn => {
 });
 
 renderFavorites();
-
+removeFavorite();
 
 })

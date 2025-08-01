@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Recipe Library</title>
   <link rel="stylesheet" href="styles/styles.css">
+  <link rel="stylesheet" href="styles/styles-large.css">
   <script src="scripts/recipe.js" defer></script>
 </head>
 <body>
@@ -13,20 +14,21 @@
     <h1>Recipe Library</h1>
     <p class="tagline">Shared Meals and Memories.</p>
 
-    <div class="navigation">
+    <a id="hamburger-menu" href="#"></a>
+    <nav class="navigation">
         <a href="Homepage.html">Home</a>
         <a href="appetizer.html">Appetizer</a>
         <a href="main.html">Main</a>
         <a href="dessert.html">Dessert</a>
         <a href="drinks.html">Drinks</a>
-    </div>
+    </nav>
   </header>
 
   <main>
     <div class="hero">
     <picture>
         <source srcset="images/pic17.webp" media="(min-width: 1000px)">
-        <source srcset="images/pic17" media="(min-width: 600px)">
+        <source srcset="images/pic17.webp" media="(min-width: 600px)">
         <img src="images/pic17.webp" alt="pic7" width="1000" height="600" loading="lazy">
       </picture>
 
@@ -37,6 +39,7 @@
         
       </div>
    </div>
+
    <h1>Bring World Culture To Your Table</h1> 
    <section class="card1">
             <img src="images/pic21.jpg" alt="profile" loading="lazy">
@@ -78,15 +81,7 @@
         </form>
 
         <aside class="card">
-            <h2>Review</h2>
-            <ul>
-                <li><a href="#">Asian</a></li>
-                <li><a href="#">Indian</a></li>
-                <li><a href="#">Europen</a></li>
-                <li><a href="#">Middle Eastern</a></li>
-                <li><a href="#">South American</a></li>
-                <li><a href="#">African</a></li>
-            </ul>
+            <img src="images/map.png" alt="map" loading="lazy">
         </aside>
       </div>
   </main>

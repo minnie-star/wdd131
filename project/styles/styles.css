@@ -1,16 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap');
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #F5AFB9;
-  color: #333;
-}
-
+/* header */
 header {
   background-color: #A8B371;
   color: white;
   padding: 0.5rem;
   text-align: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .navigation {
@@ -37,9 +38,21 @@ header {
   height: 70px;
 }
 
+.show li {
+  display: block;
+}
+
+/* body */
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #F5AFB9;
+  color: #333;
+}
+
 h1, h2 {
   font-family: 'Merriweather', serif;
-  margin: 0.5rem 0;
+  width:auto;
+  text-align: center;
 }
 
 .hero {
@@ -54,6 +67,7 @@ picture img {
 
 .meal-info {
   position: absolute;
+  display: block;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -72,7 +86,7 @@ picture img {
 
 .grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 1rem;
   padding: 1rem;
   max-width: 900px;
@@ -95,18 +109,18 @@ picture img {
 }
 
 .grid a {
-    text-decoration: none;
-    color: #131312;
+  text-decoration: none;
+  color: #131312;
 }
 
-h1 {
-  
-  color:aliceblue;
+.hero h1 {
+  color: blanchedalmond;
   text-align: center;
   border-radius: 5px;
   width: 600px;
   align-self: center;
   margin-left: 29%;
+  margin-top: 30px;
 }
 
 .card1 h2 {
@@ -117,7 +131,7 @@ h1 {
 
 .card1 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   background-color: #F5AFB9;
   margin-top: 30px;
   padding: 1px;
@@ -128,7 +142,7 @@ h1 {
   padding: 30px;
   margin: 2px;
   font-size: medium;
-  
+  display: block;
 }
 
 .card1 img {
@@ -136,11 +150,12 @@ h1 {
   margin: 0 auto;
   border-radius: 8px;
   float: right;
+  display: block;
 }
 
 .card2 {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   background-color: #F5AFB9;
   margin-top: 30px;
   padding: 1px;
@@ -151,7 +166,7 @@ h1 {
   padding: 30px;
   margin: 2px;
   font-size: medium;
-  
+  display: block;
 }
 
 .card2 img {
@@ -159,13 +174,16 @@ h1 {
   margin: 0 auto;
   border-radius: 8px;
   float: right;
+  display: block;
 }
 
 
 .form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   margin: 15px;
+  margin-top: 25px;
+  display: block;
 }
 
 .rf fieldset {
@@ -220,16 +238,10 @@ input[type="email"]
     align-self: center;
 }
 
-.card {
-  margin-top: 20px;
-  margin-left: 180px;
-}
-
-.card ul li {
-  line-height: 1.6;
-  text-align: left;
-  padding-top: 20px;
-  margin-top: 10px;
+.card img {
+  display: block;
+  width: 200px;
+  margin-left: 28px;
 }
 
 #favorites-list {
