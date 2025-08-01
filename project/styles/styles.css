@@ -30,7 +30,7 @@ nav {
 }
 
 .navigation a:hover {
-  color: #0e268f;        
+  color: lightskyblue;        
 }
 
 .logo {
@@ -273,6 +273,8 @@ input[type="email"]
 .card {
   transition: all 0.3s ease;
 }
+
+
 
 footer {
   background-color: #A8B371;

@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 footerDate.textContent = `© ${currentYear} | Last Modified: ${lastModified}`;
 
 // Hamburger Menu
-  const hamburger = document.getElementById("#hamburger-menu");
+  const hamburger = document.getElementById("hamburger-menu");
   const navMenu = document.querySelector(".navigation");
 
   if (hamburger && navMenu) {
@@ -78,6 +78,6 @@ document.querySelectorAll(".fav-btn").forEach(btn => {
 });
 
 renderFavorites();
-removeFavorite();
+
 
 })
