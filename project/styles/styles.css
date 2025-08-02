@@ -158,7 +158,7 @@ picture img {
   display: block;
 }
 
-.card1 img {
+.card1 picture {
   max-width: 550px;
   margin: 0 auto;
   border-radius: 8px;
@@ -189,7 +189,7 @@ picture img {
   display: block;
 }
 
-.card2 img {
+.card2 picture {
   max-width: 550px;
   margin: 0 auto;
   border-radius: 8px;
