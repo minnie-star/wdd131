@@ -159,7 +159,7 @@ picture img {
 }
 
 .card1 picture {
-  max-width: 550px;
+  width: auto;
   margin: 0 auto;
   border-radius: 8px;
   float: right;
@@ -190,7 +190,7 @@ picture img {
 }
 
 .card2 picture {
-  max-width: 550px;
+  width: auto;
   margin: 0 auto;
   border-radius: 8px;
   float: right;
