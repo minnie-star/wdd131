@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap');
 
+font-awesome {
+  transform: rotate(var(--fa-rotate-angle, 0deg));
+
+}
 /* header */
 header {
   background-color: #A8B371;
-  color: white;
+  color: #4c0614;
   padding: 0.5rem;
   text-align: center;
 }
@@ -27,7 +31,7 @@ nav {
 
 .navigation a {
   padding: 10px;
-  color: white;
+  color: #4c0614;
   text-decoration: none;
 }
 
@@ -36,7 +40,7 @@ nav {
   background: none;
   border: none;
   font-size: 2rem;
-  color: white;
+  color: #4c0614;
   cursor: pointer;
 }
 
@@ -60,7 +64,7 @@ nav {
 body {
   font-family: 'Open Sans', sans-serif;
   background-color: #F5AFB9;
-  color: #333;
+  color: #4c0614;
 }
 
 /* heading elements */
@@ -71,7 +75,7 @@ h1, h2 {
 }
 
 .hero h1 {
-  color: blanchedalmond;
+  color: #4c0614;
   text-align: center;
   border-radius: 5px;
   width: 600px;
@@ -83,7 +87,8 @@ h1, h2 {
 .hero h2 { 
   background-color: #A8B371;
   text-align: center;
-  color: #f8f8f8;
+  color: #4c0614;
+  padding: 0.5rem;
 }
 
 /*  hero elements  */
@@ -177,7 +182,7 @@ picture img {
 }
 
 .card1 h2 {
-  color:aliceblue;
+  color: #4c0614;
   text-align: center;
   
 }
@@ -296,10 +301,11 @@ input[type="email"]
   border-radius: 6px;
 }
 
+
 /*  footer  */
 footer {
   background-color: #A8B371;
-  color: white;
+  color: #4c0614;
   padding: 0.5rem;
   text-align: center;
 }

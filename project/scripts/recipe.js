@@ -21,7 +21,7 @@ const navMenu = document.querySelector(".navigation");
   }
 
 
-// Setting Functin Variables
+// Setting Function Variables
 const dishCards = document.querySelectorAll(".grid figure");
 const favoritesList = document.getElementById("favorites-list");
 const FAV_KEY = 'favoriteDishes';
