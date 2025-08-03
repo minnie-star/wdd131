@@ -29,7 +29,7 @@ const FAV_KEY = 'favoriteDishes';
 // Setting & Creating Array
 const dishes = Array.from(dishCards).map(card => ({
   id: parseInt(card.dataset.id),
-  name: card.querySelector("figcaption").textContent,
+  name: card.querySelector("p").textContent,
   img: card.querySelector("img").src
 }));
 
