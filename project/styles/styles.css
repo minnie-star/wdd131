@@ -1,10 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Open+Sans&display=swap');*/
 
-/*  font-awesome  */
-font-awesome {
-  transform: rotate(var(--fa-rotate-angle, 0deg));
 
+/* === Font Awesome CSS Validator Patch === */
+
+/* 1. Remove non-standard text-rendering property */
+.fa, .fa-brands, .fa-classic, .fa-regular, .fa-sharp, .fa-solid, .fab, .far, .fas {
+  text-rendering: unset; /* Removes invalid property for validator */
 }
+
+/* 2. Fix invalid rotate fallback by using a valid default (0deg) */
+.fa-rotate-by {
+  transform: rotate(var(--fa-rotate-angle, 0deg)); /* Use 0deg instead of none */
+}
+
 
 /* header */
 header {
@@ -12,6 +20,7 @@ header {
   color: #4c0614;
   padding: 0.5rem;
   text-align: center;
+  
 }
 
 /*  navigation  */
@@ -67,6 +76,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   background-color: #F5AFB9;
   color: #4c0614;
+  margin: 0;
 }
 
 /* heading elements */
