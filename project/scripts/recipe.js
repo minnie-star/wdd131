@@ -26,33 +26,33 @@ const dishCards = document.querySelectorAll(".grid figure");
 const favoritesList = document.getElementById("favorites-list");
 const FAV_KEY = 'favoriteDishes';
 
-// Setting & Creating Array
+// Creating Array of Dishes
 const dishes = Array.from(dishCards).map(card => ({
   id: parseInt(card.dataset.id),
   name: card.querySelector("p").textContent,
   img: card.querySelector("img").src
 }));
 
-// Store Favorite Dish Locally
+// Load Favorites From LocalStorage
 let favoriteDishes = JSON.parse(localStorage.getItem(FAV_KEY)) || [];
 
-// Save Favorite Function
+// Save to Loacalstorage Function
 function saveFavorites() {
   localStorage.setItem(FAV_KEY, JSON.stringify(favoriteDishes));
 }
 
-// Array Rendering Function
+// Rendering Favorite List Function
 function renderFavorites() {
   favoritesList.innerHTML = favoriteDishes.map(dish =>
-    `<li>
+    `<li data-id="${dish.id}">
       <img src="${dish.img}" alt="${dish.name}" width="50">
       ${dish.name} 
-      <button onclick="removeFavorite(${dish.id})">❌</button>
+      <button class="remove-btn">❌</button>
     </li>`
   ).join("");
 }
 
-// Add Favorite Function
+// Add Favorite Dish Function
 function addFavorite(id) {
   const dish = dishes.find(d => d.id === id);
   const alreadySaved = favoriteDishes.some(d => d.id === id);
@@ -73,18 +73,24 @@ function removeFavorite(id) {
   renderFavorites();
 }
 
-// Favorite Button
+// Event Listener for Add Favorite Button
 document.querySelectorAll(".fav-btn").forEach(btn => {
   btn.addEventListener("click", e => {
     const figure = e.target.closest("figure");
     const id = parseInt(figure.dataset.id);
     addFavorite(id);
   });
+
+  //Event Delegation for Removing Favorites
+  favoritesList.addEventListener("click", e => {
+    if (e.target.classList.contains("remove-btn")) {
+      const id = parseInt(e.target.closest("li").dataset.id);
+      removeFavorite(id);
+    }
+  })
 });
 
-// Call Render Favorite Function & Remove Favorite Function
+// Call Render Favorite Function
 renderFavorites();
-window.removeFavorite = removeFavorite;
-
 
 })
